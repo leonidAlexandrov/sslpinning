@@ -129,6 +129,16 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TCSSSLPinning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "TypeDecl",
         "name": "HPKPServiceAssembly",
         "printedName": "HPKPServiceAssembly",
@@ -165,7 +175,7 @@
           {
             "kind": "Function",
             "name": "getFallbackCertificates",
-            "printedName": "getFallbackCertificates()",
+            "printedName": "getFallbackCertificates(from:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -180,11 +190,26 @@
                   }
                 ],
                 "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:13TCSSSLPinning19HPKPServiceAssemblyO23getFallbackCertificatesSaySSGyFZ",
-            "mangledName": "$s13TCSSSLPinning19HPKPServiceAssemblyO23getFallbackCertificatesSaySSGyFZ",
+            "usr": "s:13TCSSSLPinning19HPKPServiceAssemblyO23getFallbackCertificates4fromSaySSGSo8NSBundleCSg_tFZ",
+            "mangledName": "$s13TCSSSLPinning19HPKPServiceAssemblyO23getFallbackCertificates4fromSaySSGSo8NSBundleCSg_tFZ",
             "moduleName": "TCSSSLPinning",
             "static": true,
             "declAttributes": [
@@ -318,102 +343,6 @@
               },
               {
                 "kind": "Var",
-                "name": "productionHostAndPinsURL",
-                "printedName": "productionHostAndPinsURL",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO24productionHostAndPinsURL10Foundation0I0VvpZ",
-                "mangledName": "$s13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO24productionHostAndPinsURL10Foundation0I0VvpZ",
-                "moduleName": "TCSSSLPinning",
-                "static": true,
-                "declAttributes": [
-                  "HasInitialValue",
-                  "HasStorage",
-                  "AccessControl",
-                  "RawDocComment"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "URL",
-                        "printedName": "Foundation.URL",
-                        "usr": "s:10Foundation3URLV"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO24productionHostAndPinsURL10Foundation0I0VvgZ",
-                    "mangledName": "$s13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO24productionHostAndPinsURL10Foundation0I0VvgZ",
-                    "moduleName": "TCSSSLPinning",
-                    "static": true,
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
-                "name": "debugHostAndPinsURL",
-                "printedName": "debugHostAndPinsURL",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "URL",
-                    "printedName": "Foundation.URL",
-                    "usr": "s:10Foundation3URLV"
-                  }
-                ],
-                "declKind": "Var",
-                "usr": "s:13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO19debugHostAndPinsURL10Foundation0I0VvpZ",
-                "mangledName": "$s13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO19debugHostAndPinsURL10Foundation0I0VvpZ",
-                "moduleName": "TCSSSLPinning",
-                "static": true,
-                "declAttributes": [
-                  "HasInitialValue",
-                  "HasStorage",
-                  "AccessControl",
-                  "RawDocComment"
-                ],
-                "isLet": true,
-                "hasStorage": true,
-                "accessors": [
-                  {
-                    "kind": "Accessor",
-                    "name": "Get",
-                    "printedName": "Get()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "URL",
-                        "printedName": "Foundation.URL",
-                        "usr": "s:10Foundation3URLV"
-                      }
-                    ],
-                    "declKind": "Accessor",
-                    "usr": "s:13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO19debugHostAndPinsURL10Foundation0I0VvgZ",
-                    "mangledName": "$s13TCSSSLPinning20HPKPServiceConstantsO13ConfigurationO19debugHostAndPinsURL10Foundation0I0VvgZ",
-                    "moduleName": "TCSSSLPinning",
-                    "static": true,
-                    "implicit": true,
-                    "accessorKind": "get"
-                  }
-                ]
-              },
-              {
-                "kind": "Var",
                 "name": "defaultInteractivePolicyCallbackTimeout",
                 "printedName": "defaultInteractivePolicyCallbackTimeout",
                 "children": [
@@ -498,7 +427,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(hostAndPinsURL:untrustedConnectionPolicy:cachedHostsAndPinsDefaultsKey:customHostsAndPinsStorage:customLocalCertificateProvider:appParameters:isEnabledSecTrustListValidator:shouldRememberInteractiveUserChoice:interactivePolicyCallbackTimeout:)",
+            "printedName": "init(hostAndPinsURL:fallbackHostAndPinsURL:untrustedConnectionPolicy:cachedHostsAndPinsDefaultsKey:customHostsAndPinsStorage:customHostAndPinsCertificateProviderList:customLocalCertificateProviderList:appParameters:isEnabledSecTrustListValidator:shouldRememberInteractiveUserChoice:interactivePolicyCallbackTimeout:resourceBundle:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -510,8 +439,22 @@
                 "kind": "TypeNominal",
                 "name": "URL",
                 "printedName": "Foundation.URL",
-                "hasDefaultArg": true,
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -545,13 +488,44 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "TCSSSLPinning.ILocalCertificateProvider?",
+                "printedName": "[TCSSSLPinning.ILocalCertificateProvider]?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "ILocalCertificateProvider",
-                    "printedName": "TCSSSLPinning.ILocalCertificateProvider",
-                    "usr": "s:13TCSSSLPinning25ILocalCertificateProviderP"
+                    "name": "Array",
+                    "printedName": "[TCSSSLPinning.ILocalCertificateProvider]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ILocalCertificateProvider",
+                        "printedName": "TCSSSLPinning.ILocalCertificateProvider",
+                        "usr": "s:13TCSSSLPinning25ILocalCertificateProviderP"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[TCSSSLPinning.ILocalCertificateProvider]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[TCSSSLPinning.ILocalCertificateProvider]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ILocalCertificateProvider",
+                        "printedName": "TCSSSLPinning.ILocalCertificateProvider",
+                        "usr": "s:13TCSSSLPinning25ILocalCertificateProviderP"
+                      }
+                    ],
+                    "usr": "s:Sa"
                   }
                 ],
                 "hasDefaultArg": true,
@@ -583,11 +557,26 @@
                 "printedName": "Swift.Double",
                 "hasDefaultArg": true,
                 "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Bundle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bundle",
+                    "printedName": "Foundation.Bundle",
+                    "usr": "c:objc(cs)NSBundle"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:13TCSSSLPinning24HPKPServiceConfigurationV14hostAndPinsURL25untrustedConnectionPolicy011cachedHostseF11DefaultsKey06customleF7Storage0O24LocalCertificateProvider13appParameters30isEnabledSecTrustListValidator35shouldRememberInteractiveUserChoice011interactiveJ15CallbackTimeoutAC10Foundation0G0V_AA012SSLUntrustediJ0OSSAA06IHostsefP0_pSgAA06ILocalrS0_pSgAA03AppU0VS2bSdtcfc",
-            "mangledName": "$s13TCSSSLPinning24HPKPServiceConfigurationV14hostAndPinsURL25untrustedConnectionPolicy011cachedHostseF11DefaultsKey06customleF7Storage0O24LocalCertificateProvider13appParameters30isEnabledSecTrustListValidator35shouldRememberInteractiveUserChoice011interactiveJ15CallbackTimeoutAC10Foundation0G0V_AA012SSLUntrustediJ0OSSAA06IHostsefP0_pSgAA06ILocalrS0_pSgAA03AppU0VS2bSdtcfc",
+            "usr": "s:13TCSSSLPinning24HPKPServiceConfigurationV14hostAndPinsURL012fallbackHostefG025untrustedConnectionPolicy011cachedHostseF11DefaultsKey06customneF7Storage0qieF23CertificateProviderList0q5LocalstU013appParameters017isEnabledSecTrustU9Validator35shouldRememberInteractiveUserChoice011interactiveL15CallbackTimeout14resourceBundleAC10Foundation0G0V_ARSgAA012SSLUntrustedkL0OSSAA06IHostsefR0_pSgSayAA06ILocalsT0_pGSgAzA03AppX0VS2bSdSo8NSBundleCSgtcfc",
+            "mangledName": "$s13TCSSSLPinning24HPKPServiceConfigurationV14hostAndPinsURL012fallbackHostefG025untrustedConnectionPolicy011cachedHostseF11DefaultsKey06customneF7Storage0qieF23CertificateProviderList0q5LocalstU013appParameters017isEnabledSecTrustU9Validator35shouldRememberInteractiveUserChoice011interactiveL15CallbackTimeout14resourceBundleAC10Foundation0G0V_ARSgAA012SSLUntrustedkL0OSSAA06IHostsefR0_pSgSayAA06ILocalsT0_pGSgAzA03AppX0VS2bSdSo8NSBundleCSgtcfc",
             "moduleName": "TCSSSLPinning",
             "declAttributes": [
               "AccessControl",
@@ -1376,6 +1365,26 @@
         "moduleName": "TCSSSLPinning",
         "declAttributes": [
           "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TCSSSLPinning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TCSSSLPinning",
+        "declAttributes": [
           "RawDocComment"
         ]
       },
@@ -2239,6 +2248,26 @@
             "usr": "s:SQ",
             "mangledName": "$sSQ"
           }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TCSSSLPinning",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TCSSSLPinning",
+        "declAttributes": [
+          "RawDocComment"
         ]
       },
       {
@@ -3210,303 +3239,401 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Utils\/Bundle+LocalFile.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Utils\/Bundle+LocalFile.swift",
       "kind": "StringLiteral",
       "offset": 974,
       "length": 9,
       "value": "\".bundle\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 7203,
-      "length": 17,
-      "value": "\"TCSSSLResources\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 386,
+      "length": 95,
+      "value": "[\"a\", \"n\", \"t\", \"i\", \"f\", \"r\", \"a\", \"u\", \"d\", \"_\", \"r\", \"o\", \"o\", \"t\", \"_\", \"c\", \"e\", \"r\", \"t\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 7412,
-      "length": 21,
-      "value": "\"TCSSSLGRPCResources\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 539,
+      "length": 135,
+      "value": "[\"-\", \"-\", \"-\", \"-\", \"-\", \"B\", \"E\", \"G\", \"I\", \"N\", \" \", \"C\", \"E\", \"R\", \"T\", \"I\", \"F\", \"I\", \"C\", \"A\", \"T\", \"E\", \"-\", \"-\", \"-\", \"-\", \"-\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 7443,
-      "length": 8,
-      "value": "\"bundle\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 741,
+      "length": 135,
+      "value": "[\"c\", \"e\", \"r\", \"t\", \"i\", \"f\", \"i\", \"c\", \"a\", \"t\", \"e\", \" \", \"c\", \"h\", \"a\", \"i\", \"n\", \" \", \"c\", \"o\", \"r\", \"r\", \"u\", \"p\", \"t\", \"e\", \"d\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 7870,
-      "length": 21,
-      "value": "\"thawtePrimaryRootCA\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 942,
+      "length": 135,
+      "value": "[\"c\", \"e\", \"r\", \"t\", \"i\", \"f\", \"i\", \"c\", \"a\", \"t\", \"e\", \" \", \"p\", \"i\", \"n\", \"s\", \" \", \"l\", \"o\", \"c\", \"a\", \"l\", \" \", \"l\", \"i\", \"s\", \"t\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 7930,
-      "length": 5,
-      "value": "\"cer\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 1157,
+      "length": 210,
+      "value": "[\"c\", \"e\", \"r\", \"t\", \"i\", \"f\", \"i\", \"c\", \"a\", \"t\", \"e\", \" \", \"p\", \"i\", \"n\", \"s\", \" \", \"s\", \"e\", \"r\", \"v\", \"i\", \"c\", \"e\", \" \", \"w\", \"r\", \"o\", \"n\", \"g\", \" \", \"c\", \"e\", \"r\", \"t\", \"i\", \"f\", \"i\", \"c\", \"a\", \"t\", \"e\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 7979,
-      "length": 5,
-      "value": "\"dat\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 1435,
+      "length": 145,
+      "value": "[\"c\", \"e\", \"r\", \"t\", \"i\", \"f\", \"i\", \"c\", \"a\", \"t\", \"e\", \" \", \"p\", \"i\", \"n\", \"s\", \" \", \"u\", \"p\", \"d\", \"a\", \"t\", \"e\", \" \", \"e\", \"r\", \"r\", \"o\", \"r\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 8037,
-      "length": 16,
-      "value": "\"hosts_and_pins\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 1642,
+      "length": 110,
+      "value": "[\"c\", \"o\", \"r\", \"e\", \"t\", \"e\", \"c\", \"h\", \".\", \"m\", \"o\", \"b\", \"i\", \"l\", \"e\", \".\", \"e\", \"v\", \"e\", \"n\", \"t\", \"s\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 8105,
-      "length": 6,
-      "value": "\"json\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 1808,
+      "length": 125,
+      "value": "[\"-\", \"-\", \"-\", \"-\", \"-\", \"E\", \"N\", \"D\", \" \", \"C\", \"E\", \"R\", \"T\", \"I\", \"F\", \"I\", \"C\", \"A\", \"T\", \"E\", \"-\", \"-\", \"-\", \"-\", \"-\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 8153,
-      "length": 16,
-      "value": "\"tinkoffrsa2020\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 1987,
+      "length": 220,
+      "value": "[\"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"0\", \"=\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
-      "kind": "StringLiteral",
-      "offset": 8207,
-      "length": 20,
-      "value": "\"rootca_ssl_rsa2022\""
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 2269,
+      "length": 100,
+      "value": "[\"h\", \"o\", \"s\", \"t\", \"U\", \"n\", \"a\", \"v\", \"a\", \"i\", \"l\", \"a\", \"b\", \"l\", \"e\", \"E\", \"r\", \"r\", \"o\", \"r\"]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 2450,
+      "length": 270,
+      "value": "[\"Н\", \"е\", \" \", \"у\", \"д\", \"а\", \"л\", \"о\", \"с\", \"ь\", \" \", \"н\", \"а\", \"й\", \"т\", \"и\", \" \", \"ф\", \"а\", \"й\", \"л\", \" \", \"с\", \" \", \"з\", \"а\", \"х\", \"о\", \"р\", \"д\", \"к\", \"о\", \"ж\", \"е\", \"н\", \"н\", \"ы\", \"м\", \"и\", \" \", \"п\", \"и\", \"н\", \"а\", \"м\", \"и\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 2796,
+      "length": 180,
+      "value": "[\"o\", \"r\", \"g\", \".\", \"c\", \"o\", \"c\", \"o\", \"a\", \"p\", \"o\", \"d\", \"s\", \".\", \"T\", \"C\", \"S\", \"S\", \"S\", \"L\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \"R\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\", \"s\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 3077,
+      "length": 381,
+      "value": "[\"О\", \"т\", \"с\", \"у\", \"т\", \"с\", \"т\", \"в\", \"у\", \"ю\", \"т\", \" \", \"з\", \"а\", \"к\", \"е\", \"ш\", \"и\", \"р\", \"о\", \"в\", \"а\", \"н\", \"н\", \"ы\", \"е\", \" \", \"х\", \"о\", \"с\", \"т\", \"ы\", \" \", \"и\", \" \", \"п\", \"и\", \"н\", \"ы\", \" \", \"п\", \"р\", \"и\", \" \", \"и\", \"н\", \"и\", \"ц\", \"и\", \"а\", \"л\", \"и\", \"з\", \"а\", \"ц\", \"и\", \"и\", \" \", \"T\", \"r\", \"u\", \"s\", \"t\", \"K\", \"i\", \"t\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 3540,
+      "length": 220,
+      "value": "[\"r\", \"u\", \".\", \"c\", \"o\", \"r\", \"e\", \".\", \"i\", \"o\", \"s\", \".\", \"h\", \"p\", \"k\", \"p\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \".\", \"I\", \"n\", \"t\", \"e\", \"r\", \"a\", \"c\", \"t\", \"i\", \"v\", \"e\", \"S\", \"y\", \"n\", \"c\", \"Q\", \"u\", \"e\", \"u\", \"e\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 3837,
+      "length": 195,
+      "value": "[\"r\", \"u\", \".\", \"c\", \"o\", \"r\", \"e\", \".\", \"i\", \"o\", \"s\", \".\", \"P\", \"i\", \"n\", \"s\", \"U\", \"p\", \"d\", \"a\", \"t\", \"e\", \"r\", \".\", \"u\", \"r\", \"l\", \"S\", \"e\", \"s\", \"s\", \"i\", \"o\", \"n\", \"Q\", \"u\", \"e\", \"u\", \"e\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 4094,
+      "length": 150,
+      "value": "[\"r\", \"u\", \".\", \"c\", \"o\", \"r\", \"e\", \".\", \"i\", \"o\", \"s\", \".\", \"u\", \"t\", \"i\", \"l\", \"s\", \".\", \"a\", \"t\", \"o\", \"m\", \"i\", \"c\", \".\", \"%\", \"@\", \".\", \"%\", \"@\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 4318,
+      "length": 180,
+      "value": "[\"r\", \"u\", \".\", \"t\", \"c\", \"s\", \".\", \"c\", \"o\", \"r\", \"e\", \".\", \"h\", \"p\", \"k\", \"p\", \"s\", \"e\", \"r\", \"v\", \"i\", \"c\", \"e\", \".\", \"h\", \"o\", \"s\", \"t\", \"s\", \"A\", \"n\", \"d\", \"P\", \"i\", \"n\", \"s\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 4562,
+      "length": 120,
+      "value": "[\"s\", \"s\", \"l\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \".\", \"p\", \"i\", \"n\", \"C\", \"h\", \"e\", \"c\", \"k\", \".\", \"f\", \"a\", \"i\", \"l\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 4749,
+      "length": 135,
+      "value": "[\"s\", \"s\", \"l\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \".\", \"p\", \"i\", \"n\", \"C\", \"h\", \"e\", \"c\", \"k\", \".\", \"s\", \"u\", \"c\", \"c\", \"e\", \"s\", \"s\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 4949,
+      "length": 125,
+      "value": "[\"s\", \"s\", \"l\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \".\", \"p\", \"i\", \"n\", \"U\", \"p\", \"d\", \"a\", \"t\", \"e\", \".\", \"f\", \"a\", \"i\", \"l\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 5142,
+      "length": 140,
+      "value": "[\"s\", \"s\", \"l\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \".\", \"p\", \"i\", \"n\", \"U\", \"p\", \"d\", \"a\", \"t\", \"e\", \".\", \"s\", \"u\", \"c\", \"c\", \"e\", \"s\", \"s\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 5338,
+      "length": 80,
+      "value": "[\"s\", \"s\", \"l\", \"_\", \"p\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \"_\", \"r\", \"o\", \"o\", \"t\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 5482,
+      "length": 125,
+      "value": "[\"s\", \"s\", \"l\", \"_\", \"p\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \"_\", \"r\", \"o\", \"o\", \"t\", \"_\", \"f\", \"a\", \"l\", \"l\", \"b\", \"a\", \"c\", \"k\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 5671,
+      "length": 110,
+      "value": "[\"T\", \"C\", \"S\", \"S\", \"S\", \"L\", \"P\", \"i\", \"n\", \"n\", \"i\", \"n\", \"g\", \"R\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\", \"s\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 5842,
+      "length": 95,
+      "value": "[\"T\", \"C\", \"S\", \"S\", \"S\", \"L\", \"G\", \"R\", \"P\", \"C\", \"R\", \"e\", \"s\", \"o\", \"u\", \"r\", \"c\", \"e\", \"s\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 6010,
+      "length": 193,
+      "value": "[\"T\", \"r\", \"u\", \"s\", \"t\", \"K\", \"i\", \"t\", \" \", \"н\", \"е\", \" \", \"б\", \"ы\", \"л\", \" \", \"п\", \"р\", \"о\", \"и\", \"н\", \"и\", \"ц\", \"и\", \"а\", \"л\", \"и\", \"з\", \"и\", \"р\", \"о\", \"в\", \"а\", \"н\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 6291,
+      "length": 301,
+      "value": "[\"В\", \"а\", \"л\", \"и\", \"д\", \"а\", \"т\", \"о\", \"р\", \" \", \"ц\", \"е\", \"п\", \"о\", \"ч\", \"к\", \"и\", \" \", \"с\", \"е\", \"р\", \"т\", \"и\", \"ф\", \"и\", \"к\", \"а\", \"т\", \" \", \"н\", \"е\", \" \", \"б\", \"ы\", \"л\", \" \", \"с\", \"к\", \"о\", \"н\", \"ф\", \"и\", \"г\", \"у\", \"р\", \"и\", \"р\", \"о\", \"в\", \"а\", \"н\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Generated\/GeneratedYamls.swift",
+      "kind": "Array",
+      "offset": 6655,
+      "length": 105,
+      "value": "[\"w\", \"r\", \"o\", \"n\", \"g\", \"C\", \"e\", \"r\", \"t\", \"i\", \"f\", \"i\", \"c\", \"a\", \"t\", \"e\", \"E\", \"r\", \"r\", \"o\", \"r\"]"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
       "kind": "StringLiteral",
-      "offset": 8271,
+      "offset": 10323,
+      "length": 15,
+      "value": "\"platform_root\""
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "kind": "StringLiteral",
+      "offset": 10382,
+      "length": 12,
+      "value": "\"other_root\""
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "kind": "StringLiteral",
+      "offset": 10438,
       "length": 12,
       "value": "\"grpc_roots\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
       "kind": "StringLiteral",
-      "offset": 8326,
-      "length": 21,
-      "value": "\"antifraud_root_cert\""
+      "offset": 10578,
+      "length": 16,
+      "value": "\"hosts_and_pins\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
       "kind": "StringLiteral",
-      "offset": 8591,
-      "length": 38,
-      "value": "\"ru.tcs.core.hpkpservice.hostsAndPins\""
+      "offset": 10646,
+      "length": 6,
+      "value": "\"json\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
       "kind": "StringLiteral",
-      "offset": 8758,
-      "length": 29,
-      "value": "\"https:\/\/certs.tinkoff.ru\/v1\""
+      "offset": 10697,
+      "length": 5,
+      "value": "\"dat\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
       "kind": "StringLiteral",
-      "offset": 9085,
-      "length": 23,
-      "value": "\"https:\/\/www.apple.com\""
+      "offset": 10741,
+      "length": 5,
+      "value": "\"cer\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceAssembly.swift",
       "kind": "IntegerLiteral",
-      "offset": 9390,
+      "offset": 11297,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceConfiguration.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3077,
+      "offset": 3812,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceConfiguration.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Assembly\/HPKPServiceConfiguration.swift",
       "kind": "BooleanLiteral",
-      "offset": 3135,
+      "offset": 3870,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
       "kind": "Array",
-      "offset": 1209,
+      "offset": 1229,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
       "kind": "BooleanLiteral",
-      "offset": 1253,
+      "offset": 1274,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1695,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
-      "kind": "StringLiteral",
-      "offset": 1718,
-      "length": 32,
-      "value": "\"ru.tinkoff.core.ios.sslpinning\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2159,
+      "offset": 1928,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
-      "kind": "StringLiteral",
-      "offset": 2386,
-      "length": 54,
-      "value": "\"ru.tinkoff.core.ios.hpkpPinning.InteractiveSyncQueue\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
       "kind": "BooleanLiteral",
-      "offset": 2577,
+      "offset": 2294,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
       "kind": "IntegerLiteral",
-      "offset": 2640,
+      "offset": 2357,
       "length": 2,
       "value": "10"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/HTTPPublicKeyPinningService.swift",
       "kind": "StringLiteral",
       "offset": 383,
       "length": 27,
       "value": "\"TCSSSLPinning.HTTPPublicKeyPinningService\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Models\/PayloadModel.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Models\/PayloadModel.swift",
       "kind": "StringLiteral",
       "offset": 855,
       "length": 11,
       "value": "\"is_online\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Models\/PayloadModel.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Models\/PayloadModel.swift",
       "kind": "StringLiteral",
       "offset": 855,
       "length": 11,
       "value": "\"is_online\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/PemCertificatesProvider\/PemCertificatesProvider.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/PemCertificatesProvider\/PemCertificatesProvider.swift",
       "kind": "StringLiteral",
       "offset": 230,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/PemCertificatesProvider\/PemCertificatesProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 1971,
-      "length": 29,
-      "value": "\"-----BEGIN CERTIFICATE-----\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/PemCertificatesProvider\/PemCertificatesProvider.swift",
-      "kind": "StringLiteral",
-      "offset": 2038,
-      "length": 27,
-      "value": "\"-----END CERTIFICATE-----\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/PinsUpdater\/PinsUpdater.swift",
       "kind": "IntegerLiteral",
-      "offset": 749,
+      "offset": 904,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/PinsUpdater\/PinsUpdater.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 11,
+      "value": "\"TCSSSLPinning.PinsUpdater\""
+    },
+    {
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "kind": "IntegerLiteral",
+      "offset": 747,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
       "kind": "IntegerLiteral",
-      "offset": 770,
+      "offset": 768,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
       "kind": "IntegerLiteral",
-      "offset": 789,
+      "offset": 787,
       "length": 9,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
       "kind": "IntegerLiteral",
-      "offset": 749,
+      "offset": 747,
       "length": 11,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
       "kind": "IntegerLiteral",
-      "offset": 770,
+      "offset": 768,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/HTTPPublicKeyPinningService\/StateModels\/SSLHostsAndPinsListState.swift",
       "kind": "IntegerLiteral",
-      "offset": 789,
+      "offset": 787,
       "length": 9,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Utils\/StringExtension.swift",
-      "kind": "StringLiteral",
-      "offset": 569,
-      "length": 29,
-      "value": "\"-----BEGIN CERTIFICATE-----\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/Utils\/StringExtension.swift",
-      "kind": "StringLiteral",
-      "offset": 626,
-      "length": 27,
-      "value": "\"-----END CERTIFICATE-----\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/CertificateChainValidator\/TrustKitConfigurationFactory\/TrustKitConfigurationFactory.swift",
-      "kind": "StringLiteral",
-      "offset": 2167,
-      "length": 46,
-      "value": "\"0000000000000000000000000000000000000000000=\""
-    },
-    {
-      "filePath": "\/Users\/ios_builder_60\/gitlab-runner\/builds\/TsBseGEp\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/CertificateChainValidator\/TrustKitConfigurationFactory\/TrustKitConfigurationFactory.swift",
+      "filePath": "\/Users\/User\/gitlab-runner\/builds\/QUKUec5M\/0\/coretech-mobile-ios\/ecosystem-security\/Development\/TCSSSLPinning\/Sources\/CertificateChainValidator\/TrustKitConfigurationFactory\/TrustKitConfigurationFactory.swift",
       "kind": "BooleanLiteral",
-      "offset": 2342,
+      "offset": 2318,
       "length": 5,
       "value": "false"
     }

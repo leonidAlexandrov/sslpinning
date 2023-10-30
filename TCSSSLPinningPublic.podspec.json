@@ -3,26 +3,30 @@
   "module_name": "TCSSSLPinning",
   "summary": "Library provides simple methods for implementing http public key pinning. Implemented using TrustKit framework and Trust Services API",
   "authors": "g.novik",
-  "homepage": "https://github.com/tinkoff-mobile-tech/sslpinning",
+  "homepage": "https://opensource.tinkoff.ru/tinkoff-mobile-tech/sslpinning",
   "license": {
     "type": "Apache 2.0",
     "file": "LICENSE"
   },
-  "version": "4.0.0",
+  "version": "8.1.1",
   "platforms": {
     "ios": "12.0"
   },
+  "static_framework": true,
   "source": {
-    "git": "https://github.com/tinkoff-mobile-tech/sslpinning.git",
-    "tag": "4.0.0"
+    "git": "https://opensource.tinkoff.ru/tinkoff-mobile-tech/sslpinning.git",
+    "tag": "8.1.1"
   },
   "swift_versions": [
     "5.0"
   ],
   "dependencies": {
     "TrustKit": [
-      "1.6.3"
+      "~> 3.0.2"
     ]
   },
+  "resources": [
+    "TCSSSLPinning.xcframework/ios-arm64/TCSSSLPinning.framework/TCSSSLResources.bundle"
+  ],
   "vendored_frameworks": "TCSSSLPinning.xcframework"
 }
