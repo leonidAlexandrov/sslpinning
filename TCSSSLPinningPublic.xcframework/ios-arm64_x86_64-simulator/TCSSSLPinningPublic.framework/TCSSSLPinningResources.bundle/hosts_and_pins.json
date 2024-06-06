@@ -1,0 +1,144 @@
+{
+    "payload": [
+        {
+            "host": "api.t-bank-app.ru",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                },
+                {
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                }
+            ]
+        },
+        {
+            "host": "api.t-bank-app.su",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                },
+                {
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                }
+            ]
+        },
+        {
+            "host": "cdn.t-bank-app.ru",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                },
+                {
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                }
+            ]
+        },
+        {
+            "host": "cdn.t-bank-app.su",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                },
+                {
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                }
+            ]
+        },
+        {
+            "host": "id.t-bank-app.ru",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                },
+                {
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                }
+            ]
+        },
+        {
+            "host": "id.t-bank-app.su",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                },
+                {
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                }
+            ]
+        },
+        {
+            "host": "tm.t-bank-app.ru",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                },
+                {
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                }
+            ]
+        },
+        {
+            "host": "tm.t-bank-app.su",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                },
+                {
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                }
+            ]
+        },
+        {
+            "host": "tp.t-bank-app.ru",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                },
+                {
+                    "pin": "z0Xk8ONT6AhzyWlnJV2ne3GxWcDamQS+IG1FqGjyaAA=",
+                    "serial": "18f3892ee99e5b4af732df29a84"
+                }
+            ]
+        },
+        {
+            "host": "tp.t-bank-app.su",
+            "pins": [
+                {
+                    "is_online": true,
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                },
+                {
+                    "pin": "MRDiyD7TXvYJOenVvoZsmaVIAD+cI53Ipb7ij2mGP9s=",
+                    "serial": "18f38945960e5b4af732dc69484"
+                }
+            ]
+        }
+    ]
+}
