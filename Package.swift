@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "TCSSSLPinningPublic",
+    name: "TSSLPinningPublic",
     platforms: [.iOS(.v12)],
     products: [
         .library(
@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/datatheorem/TrustKit",
-            from: "3.0.2"
+            exact: "3.0.2"
         )
     ],
     targets: [

@@ -1,8 +1,9 @@
 {
-  "name": "TCSSSLPinningPublic",
+  "name": "TSSLPinningPublic",
+  "module_name": "TCSSSLPinningPublic",
   "summary": "Library provides simple methods for implementing http public key pinning. Implemented using TrustKit framework and Trust Services API",
   "authors": "g.novik",
-  "homepage": "https://opensource.tinkoff.ru/tinkoff-mobile-tech/sslpinning",
+  "homepage": "https://opensource.tbank.ru/mobile-tech/sslpinning",
   "license": {
     "type": "Apache 2.0",
     "file": "LICENSE"
@@ -13,7 +14,7 @@
   },
   "static_framework": true,
   "source": {
-    "git": "https://opensource.tinkoff.ru/tinkoff-mobile-tech/sslpinning.git",
+    "git": "https://opensource.tbank.ru/mobile-tech/sslpinning.git",
     "tag": "10.0.0"
   },
   "swift_versions": [
