@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/datatheorem/TrustKit",
-            exact: "3.0.2"
+            .upToNextMinor(from: "3.0.3")
         )
     ],
     targets: [
