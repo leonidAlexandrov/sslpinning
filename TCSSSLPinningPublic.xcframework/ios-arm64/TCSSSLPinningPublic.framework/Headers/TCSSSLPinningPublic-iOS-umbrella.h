@@ -14,4 +14,3 @@
 
 FOUNDATION_EXPORT double TCSSSLPinningPublicVersionNumber;
 FOUNDATION_EXPORT const unsigned char TCSSSLPinningPublicVersionString[];
-
