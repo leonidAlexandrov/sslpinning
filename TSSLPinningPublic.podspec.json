@@ -14,8 +14,8 @@
   },
   "static_framework": true,
   "source": {
-    "git": "https://opensource.tbank.ru/mobile-tech/sslpinning.git",
-    "tag": "11.14.0"
+    "git": "https://github.com/leonidAlexandrov/sslpinning",
+    "branch": "master"
   },
   "swift_versions": [
     "5.0"
